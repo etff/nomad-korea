@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Review, User } from "@/lib/types";
+import { Review } from "@/lib/types";
 import { mockUsers } from "@/lib/mock-data/users";
 import { mockCities } from "@/lib/mock-data/cities";
 
