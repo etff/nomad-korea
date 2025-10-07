@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { City } from "@/lib/types";
 import { isBookmarked, toggleBookmark } from "@/lib/utils/bookmarks";
+import { getUserReaction, toggleLike, toggleDislike, ReactionType } from "@/lib/utils/reactions";
 
 export interface CityCardProps {
   city: City;
@@ -15,15 +16,53 @@ export interface CityCardProps {
 
 export function CityCard({ city, rank }: CityCardProps) {
   const [bookmarked, setBookmarked] = useState(false);
+  const [userReaction, setUserReaction] = useState<ReactionType>(null);
+  const [likesCount, setLikesCount] = useState(city.likes);
+  const [dislikesCount, setDislikesCount] = useState(city.dislikes);
 
   useEffect(() => {
     setBookmarked(isBookmarked(city.id));
+    setUserReaction(getUserReaction(city.id));
   }, [city.id]);
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.preventDefault(); // Prevent Link navigation
     const newStatus = toggleBookmark(city.id);
     setBookmarked(newStatus);
+  };
+
+  const handleLike = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent Link navigation
+    const previousReaction = userReaction;
+    const newReaction = toggleLike(city.id);
+    setUserReaction(newReaction);
+
+    // Update counts
+    if (previousReaction === 'like') {
+      setLikesCount(prev => prev - 1);
+    } else if (previousReaction === 'dislike') {
+      setDislikesCount(prev => prev - 1);
+      setLikesCount(prev => prev + 1);
+    } else {
+      setLikesCount(prev => prev + 1);
+    }
+  };
+
+  const handleDislike = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent Link navigation
+    const previousReaction = userReaction;
+    const newReaction = toggleDislike(city.id);
+    setUserReaction(newReaction);
+
+    // Update counts
+    if (previousReaction === 'dislike') {
+      setDislikesCount(prev => prev - 1);
+    } else if (previousReaction === 'like') {
+      setLikesCount(prev => prev - 1);
+      setDislikesCount(prev => prev + 1);
+    } else {
+      setDislikesCount(prev => prev + 1);
+    }
   };
 
   return (
@@ -91,18 +130,44 @@ export function CityCard({ city, rank }: CityCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="p-4 pt-0 gap-2">
-        <Button variant="default" className="flex-1" asChild>
-          <Link href={`/cities/${city.slug}`}>상세보기</Link>
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={handleBookmark}
-          className={bookmarked ? 'text-red-500' : ''}
-        >
-          {bookmarked ? '♥' : '♡'}
-        </Button>
+      <CardFooter className="p-4 pt-0 flex-col gap-2">
+        {/* Likes/Dislikes Row */}
+        <div className="w-full flex items-center justify-between text-sm">
+          <button
+            onClick={handleLike}
+            className={`flex items-center gap-1.5 px-2 py-1 rounded hover:bg-muted transition-colors ${
+              userReaction === 'like' ? 'text-blue-600 font-semibold' : 'text-muted-foreground'
+            }`}
+          >
+            <span className="text-base">👍</span>
+            <span>{likesCount}</span>
+          </button>
+
+          <button
+            onClick={handleDislike}
+            className={`flex items-center gap-1.5 px-2 py-1 rounded hover:bg-muted transition-colors ${
+              userReaction === 'dislike' ? 'text-red-600 font-semibold' : 'text-muted-foreground'
+            }`}
+          >
+            <span>{dislikesCount}</span>
+            <span className="text-base">👎</span>
+          </button>
+        </div>
+
+        {/* Action Buttons Row */}
+        <div className="w-full flex gap-2">
+          <Button variant="default" className="flex-1" asChild>
+            <Link href={`/cities/${city.slug}`}>상세보기</Link>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handleBookmark}
+            className={bookmarked ? 'text-red-500' : ''}
+          >
+            {bookmarked ? '♥' : '♡'}
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   );

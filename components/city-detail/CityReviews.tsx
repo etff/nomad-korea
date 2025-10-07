@@ -1,4 +1,4 @@
-import { City, Review } from '@/lib/types';
+import { City } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReviewCard } from '@/components/ReviewCard';
 import { getCityReviews } from '@/lib/utils/cities';

@@ -53,6 +53,8 @@ export interface City {
   recommendedPlaces?: RecommendedPlace[];
   transportation?: Transportation;
   climate?: Climate;
+  likes: number; // Total likes count
+  dislikes: number; // Total dislikes count
 }
 
 // Review Types

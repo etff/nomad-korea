@@ -1,4 +1,4 @@
-import { City, RecommendedPlace } from '@/lib/types';
+import { City } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 

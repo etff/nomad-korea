@@ -14,8 +14,6 @@ export const mockCities: City[] = [
     internetSpeed: 300,
     temperature: { summer: 28, winter: -2 },
     tags: ['대도시', '스타트업', '카페', '교통편리'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['강남 코워킹스페이스', '홍대 카페 거리', '한강 공원'],
     recommendedPlaces: [
       { name: '패스트파이브 강남점', type: 'coworking', description: '강남역 근처 프리미엄 코워킹 스페이스' },
@@ -50,8 +48,6 @@ export const mockCities: City[] = [
     internetSpeed: 280,
     temperature: { summer: 26, winter: 3 },
     tags: ['해변', '항구', '온천', '저렴'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['해운대 해수욕장', '광안리 카페', '영화의전당'],
     recommendedPlaces: [
       { name: '커먼그라운드 부산', type: 'coworking', description: '센텀시티 복합 코워킹 스페이스' },
@@ -86,8 +82,6 @@ export const mockCities: City[] = [
     internetSpeed: 250,
     temperature: { summer: 27, winter: 7 },
     tags: ['섬', '자연', '힐링', '카페'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['한라산', '성산일출봉', '월정리 카페거리'],
     recommendedPlaces: [
       { name: '더그레잇스페이스', type: 'coworking', description: '제주 제일 큰 코워킹 스페이스' },
@@ -122,8 +116,6 @@ export const mockCities: City[] = [
     internetSpeed: 290,
     temperature: { summer: 27, winter: -1 },
     tags: ['공항', '항구', '차이나타운', '교통편리'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['송도 센트럴파크', '인천공항', '월미도'],
   },
   {
@@ -139,8 +131,6 @@ export const mockCities: City[] = [
     internetSpeed: 270,
     temperature: { summer: 27, winter: -1 },
     tags: ['과학', '교육', '저렴', '조용함'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['대덕연구단지', '엑스포과학공원', '성심당'],
   },
   {
@@ -156,8 +146,6 @@ export const mockCities: City[] = [
     internetSpeed: 260,
     temperature: { summer: 29, winter: 1 },
     tags: ['패션', '문화', '따뜻함', '저렴'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['동성로', '김광석거리', '앞산전망대'],
   },
   {
@@ -173,8 +161,6 @@ export const mockCities: City[] = [
     internetSpeed: 265,
     temperature: { summer: 28, winter: 1 },
     tags: ['예술', '미식', '역사', '저렴'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['양림동 카페거리', '무등산', '국립아시아문화전당'],
   },
   {
@@ -190,8 +176,6 @@ export const mockCities: City[] = [
     internetSpeed: 270,
     temperature: { summer: 26, winter: 2 },
     tags: ['산업', '해변', '조용함', '안정적'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['간절곶', '대왕암공원', '태화강'],
   },
   {
@@ -207,8 +191,6 @@ export const mockCities: City[] = [
     internetSpeed: 285,
     temperature: { summer: 27, winter: -2 },
     tags: ['역사', '성곽', '교통편리', '삼성'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['수원화성', '행궁동 카페거리', '광교호수공원'],
   },
   {
@@ -224,8 +206,6 @@ export const mockCities: City[] = [
     internetSpeed: 300,
     temperature: { summer: 27, winter: -2 },
     tags: ['IT', '스타트업', '현대적', '교통편리'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['판교 테크노밸리', '백현동 카페거리', '탄천'],
   },
   {
@@ -241,8 +221,6 @@ export const mockCities: City[] = [
     internetSpeed: 240,
     temperature: { summer: 28, winter: 0 },
     tags: ['한옥', '미식', '전통', '힐링'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['전주한옥마을', '객사길', '덕진공원'],
   },
   {
@@ -258,8 +236,6 @@ export const mockCities: City[] = [
     internetSpeed: 260,
     temperature: { summer: 27, winter: -1 },
     tags: ['교통', '저렴', '조용함', '안정적'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['독립기념관', '천안삼거리공원', '성환역'],
   },
   {
@@ -275,8 +251,6 @@ export const mockCities: City[] = [
     internetSpeed: 240,
     temperature: { summer: 25, winter: -1 },
     tags: ['해변', '커피', '자연', '힐링'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['안목 커피거리', '경포대', '오죽헌'],
   },
   {
@@ -292,8 +266,6 @@ export const mockCities: City[] = [
     internetSpeed: 230,
     temperature: { summer: 26, winter: -4 },
     tags: ['호수', '자연', '조용함', '저렴'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['소양강댐', '남이섬', '의암호'],
   },
   {
@@ -309,8 +281,6 @@ export const mockCities: City[] = [
     internetSpeed: 250,
     temperature: { summer: 26, winter: 2 },
     tags: ['해변', '산업', '저렴', '조용함'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['호미곶', '죽도시장', '포스텍'],
   },
   {
@@ -326,8 +296,6 @@ export const mockCities: City[] = [
     internetSpeed: 255,
     temperature: { summer: 27, winter: -1 },
     tags: ['조용함', '저렴', '안정적', '공항'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['상당산성', '무심천', '육거리시장'],
   },
   {
@@ -343,8 +311,6 @@ export const mockCities: City[] = [
     internetSpeed: 230,
     temperature: { summer: 27, winter: 2 },
     tags: ['자연', '생태', '힐링', '저렴'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['순천만습지', '순천만국가정원', '낙안읍성'],
   },
   {
@@ -360,8 +326,6 @@ export const mockCities: City[] = [
     internetSpeed: 240,
     temperature: { summer: 27, winter: 1 },
     tags: ['역사', '문화', '관광', '한적함'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['불국사', '첨성대', '대릉원'],
   },
   {
@@ -377,8 +341,6 @@ export const mockCities: City[] = [
     internetSpeed: 235,
     temperature: { summer: 27, winter: 3 },
     tags: ['해변', '항구', '야경', '힐링'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['여수밤바다', '오동도', '해상케이블카'],
   },
   {
@@ -394,8 +356,6 @@ export const mockCities: City[] = [
     internetSpeed: 225,
     temperature: { summer: 24, winter: -2 },
     tags: ['해변', '산', '관광', '조용함'],
-    likes: 0,
-    dislikes: 0,
     highlights: ['속초해수욕장', '설악산', '아바이마을'],
   },
 ];
