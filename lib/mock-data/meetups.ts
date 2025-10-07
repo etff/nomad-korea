@@ -1,0 +1,43 @@
+import { Meetup } from '@/lib/types';
+
+export const mockMeetups: Meetup[] = [
+  {
+    id: 'meetup-1',
+    title: '서울 디지털 노마드 네트워킹',
+    cityId: 'city-1',
+    organizerId: 'user-1',
+    description: '서울에서 활동하는 디지털 노마드들과 함께 네트워킹하고 정보를 공유하는 시간입니다. 프리랜서, 개발자, 디자이너 모두 환영합니다!',
+    date: '2024-04-15T19:00:00Z',
+    location: '강남역 코워킹 스페이스',
+    attendeeIds: ['user-1', 'user-3', 'user-5'],
+    maxAttendees: 20,
+    tags: ['네트워킹', '정보공유', '프리랜서'],
+    createdAt: '2024-03-20T10:00:00Z',
+  },
+  {
+    id: 'meetup-2',
+    title: '부산 해변 워케이션 모임',
+    cityId: 'city-2',
+    organizerId: 'user-2',
+    description: '광안리 해변에서 함께 일하고, 저녁에는 맛있는 회를 먹으며 교류하는 모임입니다. 노트북 지참 필수!',
+    date: '2024-04-20T14:00:00Z',
+    location: '광안리 해변 카페',
+    attendeeIds: ['user-2', 'user-4'],
+    maxAttendees: 15,
+    tags: ['워케이션', '해변', '맛집'],
+    createdAt: '2024-03-18T15:30:00Z',
+  },
+  {
+    id: 'meetup-3',
+    title: '제주 한달살기 정보 공유회',
+    cityId: 'city-3',
+    organizerId: 'user-5',
+    description: '제주 한달살기를 계획 중이거나 경험이 있는 분들과 정보를 나누는 모임입니다. 숙소, 렌트카, 추천 카페 등 실용적인 정보를 공유합니다.',
+    date: '2024-04-25T16:00:00Z',
+    location: '제주시 월정리 카페',
+    attendeeIds: ['user-1', 'user-3', 'user-5'],
+    maxAttendees: 12,
+    tags: ['한달살기', '정보공유', '제주'],
+    createdAt: '2024-03-15T11:00:00Z',
+  },
+];
